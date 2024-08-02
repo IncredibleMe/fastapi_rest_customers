@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+data:
+  production.json: |
+    {
+      "logLevel": "info",
+      "rateLimits": {
+        "windowMs": 15 * 60 * 1000,
+        "max": 100
+      },
+      "database": {
+        "connectionPoolSize": 10
+      }
+    }

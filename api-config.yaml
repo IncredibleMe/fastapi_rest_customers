@@ -1,0 +1,10 @@
+# api-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+data:
+  settings.py: |
+    MONGO_DB_NAME = "myapp"
+    LOG_LEVEL = "INFO"
+    CORS_ORIGINS = ["http://localhost:3000"]
